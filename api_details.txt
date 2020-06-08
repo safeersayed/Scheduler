@@ -1,0 +1,67 @@
+# API info
+# two apis are in this project
+
+####################################################################
+1. Register User
+
+URL: <base_url>/user/add-user/
+
+TYPE: POST
+
+INPUT
+
+FORM DATA:
+
+email: <email-id>
+user_category: <user type>[values: INTERVIEWER/CANDIDATE]
+available_date: <available date>[Format: YYYY-MM-DD]
+available_time_from: <time that user available from> [ 24hr time format eg: 13:30]
+available_time_to: <time that user available to> [ 24hr time format eg: 10:00]
+
+OUTPUT
+{
+    "status": 201,
+    "message": "New post added successfully",
+    "data": {
+        "email": "",
+        "user_category": "INTERVIEWER/CANDIDATE",
+        "available_date": "",
+        "available_time_from": "",
+        "available_time_to": ""
+    }
+}
+
+####################################################################
+
+2. Get the time-slots
+
+URL : <base_url>/scheduler/schedule-list/?interviewer_id=&candidate_id=
+
+TYPE: GET
+
+INPUT
+
+PARAMS:
+
+interviewer_id: interviewer email address
+candidate_id: candidate email address
+
+
+OUTPUT
+
+{
+    "status": 200,
+    "message": "Details fetched successfully",
+    "interviewer_details": {
+        "email": "",
+        "user_category": "INTERVIEWER",
+        "available_date": "2020-06-10",
+        "time_slots": []
+    },
+    "candidate_details": {
+        "email": "",
+        "user_category": "CANDIDATE",
+        "available_date": "",
+        "time_slots": []
+    }
+}

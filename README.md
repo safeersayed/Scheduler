@@ -4,3 +4,4 @@
 # install requirements from requirements.txt
 # Make the table structure and migrate
 # run the project
+# For api details check api_details.txt file.
