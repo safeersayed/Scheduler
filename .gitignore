@@ -4,6 +4,7 @@ db.sqlite3
 user/__pycache__/*
 scheduler_api/__pycache__/*
 scheduler/__pycache__/*
+__pycache__/*
 
 user/migrations/*
 scheduler_api/migrations/*
