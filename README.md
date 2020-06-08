@@ -1,11 +1,3 @@
-# python == 3.7.7
-# django == 3.0.3
-# create a virtual environment [anaconda]
-# install requirements from requirements.txt
-# Make the table structure and migrate
-# run the project
-# For api details check api_details.txt file.
-
 # Scheduler Demo App
 An app for scheduling time-slots based on available time.
 
@@ -34,22 +26,20 @@ Currently cofigured to run it on local machine - `http://localhost:8000/.
 
 1. Register User
 
-URL: http://localhost:8000/user/add-user/
+* URL: `http://localhost:8000/user/add-user/`
 
-TYPE: POST
+* TYPE: POST
 
-INPUT
+* INPUT DATA:
 
-FORM DATA:
-
-email: <email-id>
+`email: <email-id>
 user_category: <user type>[values: INTERVIEWER/CANDIDATE]
 available_date: <available date>[Format: YYYY-MM-DD]
 available_time_from: <time that user available from> [ 24hr time format eg: 13:30]
-available_time_to: <time that user available to> [ 24hr time format eg: 10:00]
+available_time_to: <time that user available to> [ 24hr time format eg: 10:00]`
 
-OUTPUT
-{
+* OUTPUT
+`{
     "status": 201,
     "message": "New post added successfully",
     "data": {
@@ -59,25 +49,23 @@ OUTPUT
         "available_time_from": "",
         "available_time_to": ""
     }
-}
+}`
 
 2. Get the time-slots
 
-URL : http://localhost:8000/scheduler/schedule-list/?interviewer_id=&candidate_id=
+* URL : `http://localhost:8000/scheduler/schedule-list/?interviewer_id=&candidate_id=`
 
-TYPE: GET
+* TYPE: GET
 
-INPUT
+* INPUT PARAMS:
 
-PARAMS:
-
-interviewer_id: interviewer email address
-candidate_id: candidate email address
+`interviewer_id: interviewer email address
+candidate_id: candidate email address`
 
 
-OUTPUT
+* OUTPUT:
 
-{
+`{
     "status": 200,
     "message": "Details fetched successfully",
     "interviewer_details": {
@@ -92,4 +80,4 @@ OUTPUT
         "available_date": "",
         "time_slots": []
     }
-}
+}`
