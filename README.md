@@ -28,26 +28,26 @@ Currently cofigured to run it on local machine - `http://localhost:8000/`.
 
 * URL: `http://localhost:8000/user/add-user/`
 
-* TYPE: POST
+* TYPE: `POST`
 
 * INPUT DATA:
 
-`email: <email-id><br/>
-user_category: <user type>[values: INTERVIEWER/CANDIDATE]<br/>
-available_date: <available date>[Format: YYYY-MM-DD]<br/>
-available_time_from: <time that user available from> [ 24hr time format eg: 13:30]<br/>
-available_time_to: <time that user available to> [ 24hr time format eg: 10:00]`
+`email: <email-id>`<br/>
+`user_category: <user type>[values: INTERVIEWER/CANDIDATE]`<br/>
+`available_date: <available date>[Format: YYYY-MM-DD]`<br/>
+`available_time_from: <time that user available from> [ 24hr time format eg: 13:30]`<br/>
+`available_time_to: <time that user available to> [ 24hr time format eg: 10:00]`
 
-* OUTPUT
+* OUTPUT: <br/>
 `{
-    "status": 201,<br/>
-    "message": "New post added successfully",<br/>
-    "data": {<br/>
-        "email": "",<br/>
-        "user_category": "INTERVIEWER/CANDIDATE",<br/>
-        "available_date": "",<br/>
-        "available_time_from": "",<br/>
-        "available_time_to": ""<br/>
+    "status": 201,
+    "message": "New post added successfully",
+    "data": {
+        "email": "",
+        "user_category": "INTERVIEWER/CANDIDATE",
+        "available_date": "",
+        "available_time_from": "",
+        "available_time_to": ""
     }
 }`
 
@@ -55,12 +55,12 @@ available_time_to: <time that user available to> [ 24hr time format eg: 10:00]`
 
 * URL : `http://localhost:8000/scheduler/schedule-list/?interviewer_id=&candidate_id=`
 
-* TYPE: GET
+* TYPE: `GET`
 
 * INPUT PARAMS:
 
-`interviewer_id: interviewer email address <br/>
-candidate_id: candidate email address`
+`interviewer_id: interviewer email address` <br/>
+`candidate_id: candidate email address`
 
 
 * OUTPUT:
