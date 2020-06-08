@@ -6,4 +6,4 @@ scheduler_api/__pycache__/*
 scheduler/__pycache__/*
 
 user/migrations/*
-scheduler/migrations/*
+scheduler_api/migrations/*

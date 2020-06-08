@@ -1,3 +1,4 @@
+# view file for scheduler_api
 from rest_framework.views import APIView
 
 from .services import SchedulerService
@@ -5,11 +6,12 @@ from .services import SchedulerService
 from rest_framework import status
 from rest_framework.response import Response
 
+# service class object for scheduler_api app
 scheduler_management_service = SchedulerService()
 
 
 class ScheduleList(APIView):
-
+    # method to get the list
     def get(self, request):
         try:
             return scheduler_management_service.schedule_list(interviewer_id=request.GET.get('interviewer_id'),

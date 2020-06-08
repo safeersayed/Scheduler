@@ -5,16 +5,16 @@ from rest_framework.response import Response
 
 from user.services import UserManagementServices
 
+# service class object for user app
 user_management_service = UserManagementServices()
 
 
 class RegisterUser(APIView):
-
+    # method to register a user
     def post(self, request):
         try:
             return user_management_service.register_user(data=request.data)
         except Exception as e:
-            print({e.__str__()})
             return Response(
                 {
                     'status': 403,
